@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="640" viewBox="0 0 1100 640" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0e1325"/><stop offset="1" stop-color="#05070d"/></linearGradient>
+    <radialGradient id="ga" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#54EDB8" stop-opacity="0.28"/><stop offset="1" stop-color="#54EDB8" stop-opacity="0"/></radialGradient>
+    <radialGradient id="gb" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#9E7AFF" stop-opacity="0.24"/><stop offset="1" stop-color="#9E7AFF" stop-opacity="0"/></radialGradient>
+    <linearGradient id="uv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5CC7FF"/><stop offset="1" stop-color="#9E7AFF"/></linearGradient>
+    <linearGradient id="spark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#54EDB8" stop-opacity="0.35"/><stop offset="1" stop-color="#54EDB8" stop-opacity="0"/></linearGradient>
+    <linearGradient id="arc" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#54EDB8"/><stop offset="0.4" stop-color="#5CC7FF"/><stop offset="0.7" stop-color="#9E7AFF"/><stop offset="1" stop-color="#FF5C54"/></linearGradient>
+  </defs>
+  <rect width="1100" height="640" rx="16" fill="url(#bg)" stroke="#fff" stroke-opacity="0.14"/>
+  <circle cx="340" cy="80" r="300" fill="url(#ga)"/><circle cx="1000" cy="600" r="320" fill="url(#gb)"/>
+
+  <!-- traffic lights -->
+  <circle cx="22" cy="20" r="6.5" fill="#ff5f57"/><circle cx="42" cy="20" r="6.5" fill="#febc2e"/><circle cx="62" cy="20" r="6.5" fill="#28c840"/>
+
+  <!-- author badge (top right) -->
+  <g transform="translate(918 10)" font-size="11">
+    <rect width="160" height="26" rx="13" fill="#fff" fill-opacity="0.07" stroke="#fff" stroke-opacity="0.22"/>
+    <text x="14" y="17" fill="#8f9bb3">Author:</text>
+    <text x="58" y="17" font-weight="800" fill="url(#uv)">Uv</text>
+    <rect x="84" y="7" width="1" height="12" fill="#fff" fill-opacity="0.2"/>
+    <g transform="translate(96 6) scale(0.875)" fill="#fff" fill-opacity="0.6">
+      <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/>
+    </g>
+    <text x="118" y="17" font-weight="700" fill="#e7ecf5">gyuv</text>
+  </g>
+
+  <!-- sidebar -->
+  <rect x="0" y="0" width="220" height="640" rx="16" fill="#fff" fill-opacity="0.035"/>
+  <g transform="translate(18 52)">
+    <rect width="36" height="36" rx="9" fill="#141b31" stroke="#fff" stroke-opacity="0.15"/>
+    <circle cx="18" cy="19" r="10" fill="none" stroke="url(#arc)" stroke-width="3.5" stroke-dasharray="47 63" transform="rotate(135 18 19)"/>
+    <text x="48" y="16" font-size="15" font-weight="800" fill="#fff">OldMacBro</text>
+    <text x="48" y="31" font-size="10" fill="#8f9bb3">Control Center</text>
+  </g>
+  <g font-size="13" fill="#c9d2e3">
+    <rect x="14" y="110" width="192" height="32" rx="9" fill="#5CC7FF" fill-opacity="0.18" stroke="#5CC7FF" stroke-opacity="0.4"/>
+    <text x="40" y="131" fill="#fff">◉  Overview</text>
+    <text x="40" y="171">▣  Processes</text>
+    <text x="40" y="207">✦  Deep Clean</text>
+    <text x="40" y="243">🗑  Uninstaller</text>
+    <text x="40" y="279">✧  Tweaks</text>
+    <text x="40" y="315">⏻  Startup</text>
+    <text x="40" y="351">🌡  Thermals</text>
+    <text x="40" y="387">▭  Battery</text>
+    <text x="40" y="423">⚙  Settings</text>
+  </g>
+  <g transform="translate(14 540)" font-size="11">
+    <rect width="192" height="80" rx="12" fill="#fff" fill-opacity="0.05"/>
+    <circle cx="16" cy="20" r="3" fill="#54EDB8"/><text x="26" y="24" fill="#8f9bb3">CPU</text><text x="178" y="24" text-anchor="end" fill="#fff" font-weight="700">23%</text>
+    <circle cx="16" cy="42" r="3" fill="#5CC7FF"/><text x="26" y="46" fill="#8f9bb3">RAM</text><text x="178" y="46" text-anchor="end" fill="#fff" font-weight="700">65%</text>
+    <circle cx="16" cy="64" r="3" fill="#54EDB8"/><text x="26" y="68" fill="#8f9bb3">Temp</text><text x="178" y="68" text-anchor="end" fill="#fff" font-weight="700">58°</text>
+  </g>
+
+  <!-- content -->
+  <g transform="translate(250 60)">
+    <text font-size="28" font-weight="800" fill="#fff">Overview</text>
+    <text y="24" font-size="13" fill="#8f9bb3">Intel Core i5-5350U · 8 GB LPDDR3 · MacBookAir7,2</text>
+
+    <!-- processor card -->
+    <g transform="translate(0 50)">
+      <rect width="400" height="190" rx="18" fill="#fff" fill-opacity="0.05" stroke="#fff" stroke-opacity="0.12"/>
+      <text x="18" y="28" font-size="11" font-weight="800" letter-spacing="1.2" fill="#8f9bb3">▣  PROCESSOR</text>
+      <g transform="translate(90 110)">
+        <circle r="52" fill="none" stroke="#fff" stroke-opacity="0.08" stroke-width="10"/>
+        <circle r="52" fill="none" stroke="#54EDB8" stroke-width="10" stroke-linecap="round" stroke-dasharray="75 327" transform="rotate(-90)">
+          <animate attributeName="stroke-dasharray" values="75 327;160 327;95 327;75 327" dur="7s" repeatCount="indefinite"/>
+        </circle>
+        <text y="6" text-anchor="middle" font-size="24" font-weight="700" fill="#fff">23%</text>
+        <text y="24" text-anchor="middle" font-size="10" fill="#8f9bb3">load</text>
+      </g>
+      <g font-size="12" transform="translate(180 72)">
+        <text fill="#8f9bb3">Est. clock</text><text y="18" font-weight="700" fill="#fff">1.42 GHz</text>
+        <text y="48" fill="#8f9bb3">Speed limit</text><text y="66" font-weight="700" fill="#54EDB8">100%</text>
+        <text y="96" fill="#8f9bb3">Load avg</text><text y="114" font-weight="700" fill="#fff">1.21  1.36  1.40</text>
+      </g>
+    </g>
+
+    <!-- thermals card -->
+    <g transform="translate(420 50)">
+      <rect width="400" height="190" rx="18" fill="#fff" fill-opacity="0.05" stroke="#fff" stroke-opacity="0.12"/>
+      <text x="18" y="28" font-size="11" font-weight="800" letter-spacing="1.2" fill="#8f9bb3">🌡  THERMALS</text>
+      <g transform="translate(90 110)">
+        <circle r="52" fill="none" stroke="#fff" stroke-opacity="0.08" stroke-width="10"/>
+        <circle r="52" fill="none" stroke="#54EDB8" stroke-width="10" stroke-linecap="round" stroke-dasharray="30 327" transform="rotate(-90)">
+          <animate attributeName="stroke-dasharray" values="30 327;90 327;55 327;30 327" dur="9s" repeatCount="indefinite"/>
+          <animate attributeName="stroke" values="#54EDB8;#FFB847;#54EDB8;#54EDB8" dur="9s" repeatCount="indefinite"/>
+        </circle>
+        <text y="6" text-anchor="middle" font-size="24" font-weight="700" fill="#fff">58°</text>
+        <text y="24" text-anchor="middle" font-size="10" fill="#8f9bb3">nominal</text>
+      </g>
+      <g font-size="12" transform="translate(180 72)">
+        <text fill="#8f9bb3">Fan 1</text><text y="18" font-weight="700" fill="#fff">1,800 rpm</text>
+        <text y="48" fill="#8f9bb3">Fan profile</text><text y="66" font-weight="700" fill="#FFB847">Aggressive Cooling</text>
+        <text y="96" fill="#8f9bb3">Turbo Boost</text><text y="114" font-weight="700" fill="#fff">Enabled</text>
+      </g>
+    </g>
+
+    <!-- memory card -->
+    <g transform="translate(0 260)">
+      <rect width="820" height="110" rx="18" fill="#fff" fill-opacity="0.05" stroke="#fff" stroke-opacity="0.12"/>
+      <text x="18" y="28" font-size="11" font-weight="800" letter-spacing="1.2" fill="#8f9bb3">◫  MEMORY</text>
+      <g transform="translate(730 14)"><rect width="72" height="20" rx="10" fill="#54EDB8" fill-opacity="0.15"/><text x="36" y="14" text-anchor="middle" font-size="10" font-weight="800" fill="#54EDB8">NORMAL</text></g>
+      <g transform="translate(18 44)">
+        <rect width="784" height="16" rx="4" fill="#fff" fill-opacity="0.06"/>
+        <rect width="300" height="16" rx="3" fill="#5CC7FF"><animate attributeName="width" values="300;360;270;300" dur="8s" repeatCount="indefinite"/></rect>
+        <rect x="304" width="150" height="16" rx="3" fill="#FF739E"/>
+        <rect x="458" width="90" height="16" rx="3" fill="#FAC74D"/>
+        <rect x="552" width="140" height="16" rx="3" fill="#739EFF"/>
+        <g font-size="11" transform="translate(0 40)">
+          <rect y="-9" width="10" height="10" rx="2" fill="#5CC7FF"/><text x="16" fill="#8f9bb3">App 3.0 GB</text>
+          <rect x="130" y="-9" width="10" height="10" rx="2" fill="#FF739E"/><text x="146" fill="#8f9bb3">Wired 1.5 GB</text>
+          <rect x="270" y="-9" width="10" height="10" rx="2" fill="#FAC74D"/><text x="286" fill="#8f9bb3">Compressed 0.9 GB</text>
+          <rect x="440" y="-9" width="10" height="10" rx="2" fill="#739EFF"/><text x="456" fill="#8f9bb3">Cached 1.4 GB</text>
+          <text x="784" text-anchor="end" fill="#8f9bb3">Swap 120 MB</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- history sparklines -->
+    <g transform="translate(0 390)">
+      <rect width="820" height="140" rx="18" fill="#fff" fill-opacity="0.05" stroke="#fff" stroke-opacity="0.12"/>
+      <text x="18" y="28" font-size="11" font-weight="800" letter-spacing="1.2" fill="#8f9bb3">〰  CPU · 60 SAMPLES</text>
+      <path d="M18 120 L18 100 C80 96 120 70 180 84 S300 60 360 78 S480 50 540 72 S660 90 720 66 S790 80 802 76 L802 120 Z" fill="url(#spark)">
+        <animate attributeName="d" dur="8s" repeatCount="indefinite"
+          values="M18 120 L18 100 C80 96 120 70 180 84 S300 60 360 78 S480 50 540 72 S660 90 720 66 S790 80 802 76 L802 120 Z;
+                  M18 120 L18 92 C80 80 120 96 180 70 S300 88 360 60 S480 76 540 58 S660 70 720 86 S790 64 802 70 L802 120 Z;
+                  M18 120 L18 100 C80 96 120 70 180 84 S300 60 360 78 S480 50 540 72 S660 90 720 66 S790 80 802 76 L802 120 Z"/>
+      </path>
+      <path d="M18 100 C80 96 120 70 180 84 S300 60 360 78 S480 50 540 72 S660 90 720 66 S790 80 802 76" fill="none" stroke="#54EDB8" stroke-width="2">
+        <animate attributeName="d" dur="8s" repeatCount="indefinite"
+          values="M18 100 C80 96 120 70 180 84 S300 60 360 78 S480 50 540 72 S660 90 720 66 S790 80 802 76;
+                  M18 92 C80 80 120 96 180 70 S300 88 360 60 S480 76 540 58 S660 70 720 86 S790 64 802 70;
+                  M18 100 C80 96 120 70 180 84 S300 60 360 78 S480 50 540 72 S660 90 720 66 S790 80 802 76"/>
+      </path>
+    </g>
+  </g>
+</svg>

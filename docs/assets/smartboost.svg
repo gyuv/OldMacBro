@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="470" viewBox="0 0 760 470" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101629"/><stop offset="1" stop-color="#06080f"/></linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#5CC7FF" stop-opacity="0.3"/><stop offset="1" stop-color="#5CC7FF" stop-opacity="0"/></radialGradient>
+    <linearGradient id="btn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5CC7FF"/><stop offset="1" stop-color="#3a9fd8"/></linearGradient>
+    <linearGradient id="scan" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5CC7FF" stop-opacity="0"/><stop offset="0.5" stop-color="#5CC7FF" stop-opacity="0.25"/><stop offset="1" stop-color="#5CC7FF" stop-opacity="0"/></linearGradient>
+  </defs>
+  <rect width="760" height="470" rx="22" fill="url(#bg)" stroke="#fff" stroke-opacity="0.1"/>
+  <circle cx="120" cy="60" r="260" fill="url(#glow)"/>
+
+  <g transform="translate(32 40)">
+    <text font-size="12" font-weight="800" letter-spacing="1.4" fill="#8f9bb3">⚡  SMART BOOST</text>
+    <text y="26" font-size="12" fill="#8f9bb3">Checks what's slowing your Mac down right now, and fixes it.</text>
+  </g>
+
+  <!-- scanning sweep -->
+  <rect x="-200" y="90" width="200" height="300" fill="url(#scan)">
+    <animate attributeName="x" values="-200;760;760" keyTimes="0;0.25;1" dur="10s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- findings appear one by one, then get ticked -->
+  <g font-size="14">
+    <!-- row 1 memory -->
+    <g transform="translate(32 96)" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.08;0.12;1" dur="10s" repeatCount="indefinite"/>
+      <rect width="696" height="56" rx="12" fill="#fff" fill-opacity="0.045"/>
+      <text x="18" y="35" font-size="18">🧠</text>
+      <text x="52" y="25" font-weight="700" fill="#fff">Idle apps are holding 1.4 GB</text>
+      <text x="52" y="43" font-size="12" fill="#8f9bb3">Slack, Spotify, Preview: unused for 20+ minutes</text>
+      <rect x="560" y="13" width="120" height="30" rx="9" fill="#5CC7FF" fill-opacity="0.16" stroke="#5CC7FF" stroke-opacity="0.5"/>
+      <text x="620" y="33" text-anchor="middle" font-size="12" font-weight="700" fill="#cfefff">Close 3 apps</text>
+      <g opacity="0"><animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.55;0.6;1" dur="10s" repeatCount="indefinite"/>
+        <rect x="560" y="13" width="120" height="30" rx="9" fill="#54EDB8"/><text x="620" y="33" text-anchor="middle" font-size="13" font-weight="800" fill="#032117">✓ Freed</text></g>
+    </g>
+    <!-- row 2 cpu hog -->
+    <g transform="translate(32 162)" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.14;0.18;1" dur="10s" repeatCount="indefinite"/>
+      <rect width="696" height="56" rx="12" fill="#fff" fill-opacity="0.045"/>
+      <text x="18" y="35" font-size="18">🔥</text>
+      <text x="52" y="25" font-weight="700" fill="#fff">Dropbox is using 94% CPU in the background</text>
+      <text x="52" y="43" font-size="12" fill="#8f9bb3">It isn't the app you're using. Quitting it frees the CPU for you.</text>
+      <rect x="560" y="13" width="120" height="30" rx="9" fill="#FFB847" fill-opacity="0.16" stroke="#FFB847" stroke-opacity="0.5"/>
+      <text x="620" y="33" text-anchor="middle" font-size="12" font-weight="700" fill="#ffefd4">Quit Dropbox</text>
+      <g opacity="0"><animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.62;0.67;1" dur="10s" repeatCount="indefinite"/>
+        <rect x="560" y="13" width="120" height="30" rx="9" fill="#54EDB8"/><text x="620" y="33" text-anchor="middle" font-size="13" font-weight="800" fill="#032117">✓ Done</text></g>
+    </g>
+    <!-- row 3 thermal -->
+    <g transform="translate(32 228)" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.2;0.24;1" dur="10s" repeatCount="indefinite"/>
+      <rect width="696" height="56" rx="12" fill="#fff" fill-opacity="0.045"/>
+      <text x="18" y="35" font-size="18">🌡</text>
+      <text x="52" y="25" font-weight="700" fill="#fff">The CPU is hot (87 °C)</text>
+      <text x="52" y="43" font-size="12" fill="#8f9bb3">Fans spin up early with Aggressive Cooling, before the CPU slows down.</text>
+      <rect x="560" y="13" width="120" height="30" rx="9" fill="#FF5C54" fill-opacity="0.16" stroke="#FF5C54" stroke-opacity="0.5"/>
+      <text x="620" y="33" text-anchor="middle" font-size="12" font-weight="700" fill="#ffdcda">Cool it down</text>
+      <g opacity="0"><animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.69;0.74;1" dur="10s" repeatCount="indefinite"/>
+        <rect x="560" y="13" width="120" height="30" rx="9" fill="#54EDB8"/><text x="620" y="33" text-anchor="middle" font-size="13" font-weight="800" fill="#032117">✓ Cooling</text></g>
+    </g>
+    <!-- row 4 visuals -->
+    <g transform="translate(32 294)" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.26;0.3;1" dur="10s" repeatCount="indefinite"/>
+      <rect width="696" height="56" rx="12" fill="#fff" fill-opacity="0.045"/>
+      <text x="18" y="35" font-size="18">✨</text>
+      <text x="52" y="25" font-weight="700" fill="#fff">Graphics-heavy effects are on</text>
+      <text x="52" y="43" font-size="12" fill="#8f9bb3">Transparency and window animations make the Intel HD 6000 work hard.</text>
+      <rect x="560" y="13" width="120" height="30" rx="9" fill="#54EDB8" fill-opacity="0.16" stroke="#54EDB8" stroke-opacity="0.5"/>
+      <text x="620" y="33" text-anchor="middle" font-size="12" font-weight="700" fill="#dbfff2">Light visuals</text>
+      <g opacity="0"><animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.76;0.81;1" dur="10s" repeatCount="indefinite"/>
+        <rect x="560" y="13" width="120" height="30" rx="9" fill="#54EDB8"/><text x="620" y="33" text-anchor="middle" font-size="13" font-weight="800" fill="#032117">✓ Applied</text></g>
+    </g>
+  </g>
+
+  <!-- fix everything button with press pulse -->
+  <g transform="translate(32 374)">
+    <rect width="200" height="44" rx="12" fill="url(#btn)"/>
+    <text x="100" y="28" text-anchor="middle" font-size="14" font-weight="800" fill="#04121c">Fix everything</text>
+    <rect width="200" height="44" rx="12" fill="#fff" opacity="0">
+      <animate attributeName="opacity" values="0;0;0.35;0" keyTimes="0;0.5;0.53;0.58" dur="10s" repeatCount="indefinite"/>
+    </rect>
+    <text x="224" y="28" font-size="13" fill="#54EDB8" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.84;0.88;0.97;1" dur="10s" repeatCount="indefinite"/>
+      Your Mac is back in shape. Freed 1.4 GB, CPU calm, fans on.
+    </text>
+  </g>
+</svg>

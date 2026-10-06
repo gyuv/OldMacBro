@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="440" viewBox="0 0 1280 440" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1222"/><stop offset="1" stop-color="#05070d"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#54EDB8" stop-opacity="0.55"/><stop offset="1" stop-color="#54EDB8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#9E7AFF" stop-opacity="0.5"/><stop offset="1" stop-color="#9E7AFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowC" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#5CC7FF" stop-opacity="0.45"/><stop offset="1" stop-color="#5CC7FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="arc" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#54EDB8"/><stop offset="0.35" stop-color="#5CC7FF"/>
+      <stop offset="0.65" stop-color="#9E7AFF"/><stop offset="1" stop-color="#FF5C54"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="0.6" stop-color="#cfe9ff"/><stop offset="1" stop-color="#b9a6ff"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="titleClip"><text x="470" y="200" font-size="92" font-weight="800" letter-spacing="-2">OldMacBro</text></clipPath>
+  </defs>
+
+  <rect width="1280" height="440" rx="28" fill="url(#bg)"/>
+  <!-- drifting ambient lights -->
+  <circle cx="230" cy="120" r="260" fill="url(#glowA)">
+    <animate attributeName="cx" values="230;300;230" dur="11s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="120;170;120" dur="13s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1080" cy="360" r="300" fill="url(#glowB)">
+    <animate attributeName="cx" values="1080;990;1080" dur="12s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="760" cy="40" r="220" fill="url(#glowC)">
+    <animate attributeName="cy" values="40;90;40" dur="9s" repeatCount="indefinite"/>
+  </circle>
+  <!-- subtle grid -->
+  <g stroke="#ffffff" stroke-opacity="0.035">
+    <path d="M0 110H1280M0 220H1280M0 330H1280M160 0V440M320 0V440M480 0V440M640 0V440M800 0V440M960 0V440M1120 0V440"/>
+  </g>
+
+  <!-- app icon -->
+  <g transform="translate(150 70)">
+    <rect width="260" height="260" rx="60" fill="#0f1528" stroke="#ffffff" stroke-opacity="0.16"/>
+    <circle cx="130" cy="135" r="80" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="20"/>
+    <circle cx="130" cy="135" r="80" fill="none" stroke="url(#arc)" stroke-width="20" stroke-linecap="round"
+            stroke-dasharray="377 503" transform="rotate(135 130 135)">
+      <animate attributeName="stroke-dasharray" values="40 503;377 503;300 503;377 503" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <g transform="rotate(30 130 135)">
+      <line x1="130" y1="135" x2="130" y2="75" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+      <animateTransform attributeName="transform" type="rotate" values="-60 130 135;40 130 135;10 130 135;-60 130 135" dur="6s" repeatCount="indefinite"/>
+    </g>
+    <circle cx="130" cy="135" r="11" fill="#fff"/>
+    <text x="130" y="232" text-anchor="middle" font-size="30" font-weight="900" fill="#fff" fill-opacity="0.92" letter-spacing="3">BRO</text>
+  </g>
+
+  <!-- title with moving shine -->
+  <text x="470" y="200" font-size="92" font-weight="800" letter-spacing="-2" fill="url(#title)">OldMacBro</text>
+  <g clip-path="url(#titleClip)">
+    <rect x="-300" y="100" width="220" height="120" fill="url(#shine)" transform="skewX(-20)">
+      <animate attributeName="x" values="300;1100;1100" keyTimes="0;0.5;1" dur="5s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <text x="474" y="250" font-size="26" fill="#cfd8ea" fill-opacity="0.85">Revive your Intel Mac. One click, zero lag.</text>
+  <text x="474" y="288" font-size="17" fill="#9aa7bf">Built for MacBook Air 2017 · Broadwell · Intel HD 6000 · 8 GB</text>
+
+  <!-- pills -->
+  <g font-size="14" font-weight="600">
+    <g transform="translate(474 320)">
+      <rect width="150" height="34" rx="17" fill="#54EDB8" fill-opacity="0.14" stroke="#54EDB8" stroke-opacity="0.5"/>
+      <text x="75" y="22" text-anchor="middle" fill="#54EDB8">⚡ Smart Boost</text>
+    </g>
+    <g transform="translate(636 320)">
+      <rect width="150" height="34" rx="17" fill="#5CC7FF" fill-opacity="0.14" stroke="#5CC7FF" stroke-opacity="0.5"/>
+      <text x="75" y="22" text-anchor="middle" fill="#5CC7FF">🌡 Live Thermals</text>
+    </g>
+    <g transform="translate(798 320)">
+      <rect width="150" height="34" rx="17" fill="#9E7AFF" fill-opacity="0.14" stroke="#9E7AFF" stroke-opacity="0.5"/>
+      <text x="75" y="22" text-anchor="middle" fill="#b9a6ff">🗑 Uninstaller</text>
+    </g>
+    <g transform="translate(960 320)">
+      <rect width="150" height="34" rx="17" fill="#FFB847" fill-opacity="0.14" stroke="#FFB847" stroke-opacity="0.5"/>
+      <text x="75" y="22" text-anchor="middle" fill="#FFB847">🧹 Deep Clean</text>
+    </g>
+  </g>
+  <text x="1250" y="420" text-anchor="end" font-size="13" fill="#7f8aa3">by Uv</text>
+</svg>

@@ -1,0 +1,20 @@
+name: Fetch Private Release
+on:
+  repository_dispatch:
+    types: [private_release_published]
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Private Release
+        env:
+          # This is the token from the first answer used to read the private repo
+          GH_TOKEN: ${{ secrets.PRIVATE_REPO_TOKEN }} 
+        run: |
+          echo "A new release (${{ github.event.client_payload.tag }}) was published!"
+          
+          gh release download ${{ github.event.client_payload.tag }} \
+            --repo gyuv/OLD-MAC-BRO \
+            --pattern "*.zip" \
+            --dir ./downloads

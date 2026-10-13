@@ -7,6 +7,7 @@
 <img src="https://img.shields.io/badge/macOS-12%2B-111827?style=for-the-badge&logo=apple&logoColor=white" alt="macOS 12+"/>
 <img src="https://img.shields.io/badge/Intel-x86__64-0071C5?style=for-the-badge&logo=intel&logoColor=white" alt="Intel x86_64"/>
 <img src="https://img.shields.io/badge/Apple%20Silicon-M1%E2%80%93M4-A2AAAD?style=for-the-badge&logo=apple&logoColor=white" alt="Apple Silicon M1–M4"/>
+<img src="https://img.shields.io/badge/Windows%20%26%20Server-Setup%20%7C%20portable-0078D4?style=for-the-badge&logo=windows&logoColor=white" alt="Windows and Windows Server"/>
 <img src="https://img.shields.io/github/v/release/gyuv/oldmacbro?style=for-the-badge&color=5CC7FF&label=Version" alt="Latest version"/>
 <img src="https://img.shields.io/github/downloads/gyuv/oldmacbro/total?style=for-the-badge&color=54EDB8&label=Downloads" alt="Total downloads"/>
 <img src="https://img.shields.io/badge/100%25-Native-9E7AFF?style=for-the-badge&logo=swift&logoColor=white" alt="100% native"/>
@@ -17,10 +18,10 @@
 **OldMacBro finds what's weighing it down and takes it off, in one click.**
 
 <a href="https://github.com/gyuv/oldmacbro/releases/latest">
-  <img src="https://img.shields.io/badge/%E2%AC%87%20Download%20OldMacBro-.dmg-54EDB8?style=for-the-badge&labelColor=0b1020" alt="Download the DMG" height="44"/>
+  <img src="https://img.shields.io/badge/%E2%AC%87%20Download%20OldMacBro-Mac%20%C2%B7%20Windows-54EDB8?style=for-the-badge&labelColor=0b1020" alt="Download for Mac or Windows" height="44"/>
 </a>
 
-<sub>Free · Native Swift · No Electron · Tuned for the MacBook Air 13" (2017) · Native on Apple Silicon too</sub>
+<sub>Free · Native Swift · No Electron · Tuned for the MacBook Air 13" (2017) · Native on Apple Silicon too · Now on Windows & Windows Server</sub>
 
 <sub>by <b>Uv</b> · <a href="https://github.com/gyuv">@gyuv</a></sub>
 
@@ -38,6 +39,7 @@
 - [Download & install](#-download--install)
 - [Which edition do I need?](#-which-edition-do-i-need)
 - [Features](#-features)
+- [OldMacBro for Windows](#-oldmacbro-for-windows--windows-server)
 - [Why native?](#-why-native)
 - [Requirements](#-requirements)
 - [Safety promises](#-safety-promises)
@@ -50,18 +52,30 @@
 
 ## ⬇️ Download & install
 
-1. **Download** the right edition from the **[Releases page](https://github.com/gyuv/oldmacbro/releases/latest)**: `OldMacBro-x.y.z-Intel.dmg` or `OldMacBro-x.y.z-AppleSilicon.dmg`. See [Which edition do I need?](#-which-edition-do-i-need)
-2. **Open** the DMG and drag **OldMacBro** onto **Applications**.
-3. **First launch:** right-click **OldMacBro.app** and choose **Open**, then **Open** again.<br/>
+Latest: **v1.8.0**. Get it from the **[Releases page](https://github.com/gyuv/oldmacbro/releases/latest)**:
+
+| Your computer | Installer | Portable (no install) |
+|---|---|---|
+| 💻 **Intel Mac** (*Processor* says Intel) | `OldMacBro-1.8.0-Intel.dmg` | `OldMacBro-1.8.0-Intel-portable.zip` |
+| 🍏 **Apple Silicon Mac** (*Chip* says Apple M1–M4) | `OldMacBro-1.8.0-AppleSilicon.dmg` | `OldMacBro-1.8.0-AppleSilicon-portable.zip` |
+| 🪟 **Windows 10/11 or Windows Server 2012 R2–2025** | `OldMacBro-Windows-1.8.0-Setup.exe` | `OldMacBro-Windows-1.8.0-portable.zip` |
+
+**Mac**
+
+1. **Open** the DMG and drag **OldMacBro** onto **Applications** (or unzip the portable version anywhere).
+2. **First launch:** right-click **OldMacBro.app** and choose **Open**, then **Open** again.<br/>
    <sub>You only do this once. The app is ad-hoc signed and doesn't come from the App Store, so Gatekeeper asks first.</sub>
-4. Click the **chip icon** in your menu bar, then **⚡ Smart Boost**. Done.
+3. Click the **chip icon** in your menu bar, then **⚡ Smart Boost**. Done.
+
+**Windows:** run the Setup, or unzip the portable version and run `OldMacBro.exe` (it asks for admin once). See [OldMacBro for Windows](#-oldmacbro-for-windows--windows-server).
 
 <details>
-<summary><b>Recommended one-time setup</b></summary>
+<summary><b>Recommended one-time setup (Mac)</b></summary>
 <br/>
 
 - **Settings → Privileged Helper → Install.** One password prompt lets OldMacBro control the fans, toggle Turbo Boost and run admin clean-ups without asking every time.
 - **Tweaks → Apply recommended** for a permanently snappier feel.
+- **Settings → Date & Time → Sync now** with *auto-correct at every startup* ticked, if your Mac loses the date when the battery runs flat.
 - **Uninstaller blocked by macOS?** Allow OldMacBro in **System Settings → Privacy & Security → Full Disk Access**, and **App Management** on macOS 13 or later.
 </details>
 
@@ -69,17 +83,19 @@
 <summary><b>Updating</b></summary>
 <br/>
 
-Quit OldMacBro (menu bar → ⏻), drag the new version into **Applications** and choose **Replace**. Your settings, widget positions and Silent Mode backups are kept.
+From v1.6.0 OldMacBro **updates itself** on Mac and Windows: new releases download in the background, you see **Update available**, and one click on **Restart to update** installs it. Your settings are kept.
+
+Older versions: quit OldMacBro, install the new version over the old one and choose **Replace**.
 </details>
 
 <details>
 <summary><b>Verifying your download (optional)</b></summary>
 <br/>
 
-Each release lists a SHA-256 checksum. Compare it with:
+Each release includes `SHA256SUMS.txt`. Compare with:
 
 ```bash
-shasum -a 256 ~/Downloads/OldMacBro-*.dmg
+shasum -a 256 ~/Downloads/OldMacBro-*
 ```
 </details>
 
@@ -93,6 +109,8 @@ Click the Apple menu  → **About This Mac**:
 |---|---|---|
 | **Processor:** Intel Core … | `OldMacBro-x.y.z-Intel.dmg` | x86_64, tuned for the MacBook Air 2017 |
 | **Chip:** Apple M1, M2, M3 or M4 | `OldMacBro-x.y.z-AppleSilicon.dmg` | Native arm64, no Rosetta |
+
+Each edition also comes as a portable zip (`-Intel-portable.zip`, `-AppleSilicon-portable.zip`).
 
 <sub>Two editions ship starting with v1.4.0. Releases up to v1.3.0 have a single Intel DMG.</sub>
 
@@ -111,7 +129,7 @@ Click the Apple menu  → **About This Mac**:
 
 - **Live status item** with CPU %, temperature and RAM. The glyph changes colour as the Mac heats up.
 - **Popover** with three rings (CPU · RAM · Temp), a bar per core and a fan-profile switch.
-- **Quick actions:** Purge RAM, Flush DNS, Quick Clean and Silent Mode.
+- **Quick actions:** Smart Boost, Flush DNS, Quick Clean and Silent Mode.
 - **Right-click** for the full action menu.
 
 <sub>🟢 healthy · 🟠 busy · 🔴 needs attention</sub>
@@ -198,6 +216,39 @@ Native arm64, with features made for M-series Macs:
 
 ---
 
+## 🕒 Date & Time repair (new in v1.8.0)
+
+When a Mac's battery drains completely, a worn backup supply can make it start up with the wrong date and time, which breaks websites, iCloud, Wi-Fi logins and updates. OldMacBro checks your clock against Apple's time server every time it opens. If it's wrong, a **Correct it** card shows how far off it is and fixes it with one click. Tick **auto-correct at every startup** and the clock is fixed within seconds of joining Wi-Fi, before you even open the app.
+
+<sub>OldMacBro needs an internet connection to know the right time. The hardware fault itself needs a battery repair.</sub>
+
+---
+
+## 🪟 OldMacBro for Windows & Windows Server
+
+Two ways to get it: **`OldMacBro-Windows-x.y.z-Setup.exe`** (normal install with Start menu and uninstaller) or **`OldMacBro-Windows-x.y.z-portable.zip`** (unzip anywhere, even a USB stick, and run `OldMacBro.exe`).
+
+Built for machines shared by many people. **One run, by one administrator, optimises the whole machine and every user on it:**
+
+| | What it does |
+|:-:|---|
+| 🩺 | **Why is it slow?** diagnoses the real causes: hard drive vs SSD, disk health, disk hogs, driver memory leaks, duplicate antivirus, OneDrive-redirected folders, dead network drives, slow folder opening and low disk space, each with its own Fix button |
+| 🚀 | **Revive this PC** applies every safe fix in one go, with live progress |
+| ⚡ | **Smart Boost** finds memory pressure, CPU hogs, stale sessions, heavy visuals, background apps and startup bloat, then applies the safe fixes |
+| ✦ | **Deep Clean** empties temp files, browser caches, crash dumps and thumbnails in *every* user profile, plus Windows Update leftovers, logs and Recycle Bins |
+| ✧ | **Tweaks** for the machine *and* every user's profile, including signed-out users and the Default profile. All backed up, all restorable |
+| ◍ | **Users & Sessions** shows everyone signed in (Remote Desktop included); message them or sign out stale sessions |
+| ⏻ | **Startup** and **Services** for the machine and each user |
+| ▤ | **Apps** uninstaller with search, multi-select and select all |
+| ◍ | **Disk Space** analyzer that drills into drives and folders |
+| ⚒ | **Tools**: network repair, DISM + SFC system file check with live progress, restore points, nightly maintenance, HTML health report |
+| ⇣ | **Auto-update** in the background; one click on *Restart to update* |
+| ⌨ | **Command line** for Server Core and Task Scheduler: `/boost`, `/diagnose`, `/clean`, `/tweaks`, `/restore`, `/report` |
+
+Runs on Windows 10 and 11, Windows Server 2012 R2, 2016, 2019, 2022 and 2025 (and Windows 7/8.1 with .NET Framework 4.8).
+
+---
+
 ## 🛠 Why native?
 
 Most "Mac cleaner" and system-monitor apps are web pages in a box. On an 8 GB, dual-core 2017 MacBook Air, that box *is* the lag.
@@ -224,6 +275,7 @@ Most "Mac cleaner" and system-monitor apps are web pages in a box. On an 8 GB, d
 | **Tuned for** | MacBook Air 13" (2017, `MacBookAir7,2`): dual-core Broadwell i5/i7, Intel HD Graphics 6000, 8 GB LPDDR3 |
 | **Also works on** | Most Intel (x86_64) Macs |
 | **Apple Silicon** | M1, M2, M3 and M4 Macs, with the Apple Silicon edition |
+| **Windows** | Windows 10/11, Windows Server 2012 R2–2025 (.NET Framework 4.8) |
 | **macOS** | Monterey (12) or newer, including newer versions installed through [OpenCore Legacy Patcher](https://dortania.github.io/OpenCore-Legacy-Patcher/) |
 
 ---
